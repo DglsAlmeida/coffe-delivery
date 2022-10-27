@@ -1,5 +1,6 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { defaultTheme } from "../../styles/theme";
+import { formatCurrency } from "../../utils/formatCurrency";
 import { CoffeCardProps } from "./interfaces";
 import * as S from "./styles";
 
@@ -18,12 +19,7 @@ export const CoffeCard = ({
       <S.Description>{description}</S.Description>
 
       <S.ButtonsContainer>
-        <S.Price>
-          {new Intl.NumberFormat("pt-BR", {
-            style: "currency",
-            currency: "BRL",
-          }).format(price)}
-        </S.Price>
+        <S.Price>{formatCurrency(price)}</S.Price>
         <S.QuantityContainer>
           <S.Button>
             <Minus size={14} color={defaultTheme.colors.purpleDark} />

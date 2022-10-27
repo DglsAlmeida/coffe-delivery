@@ -7,29 +7,25 @@ export const CoffeCardContainer = styled.div`
   justify-content: center;
   background: ${({ theme }) => theme.colors.grayLight};
   border-radius: 6px 36px;
-  padding: 20px 24px;
+  padding: 1.25rem 1.5rem;
 
   img {
-    margin-top: -40px;
-  }
-
-  & + & {
-    margin-top: 35px;
+    margin-top: -2.5rem;
   }
 `;
 
 export const CoffeType = styled.span`
-  font-size: 10px;
+  font-size: 0.625rem;
 `;
 
 export const Title = styled.span`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: ${({ theme }) => theme.colors.brown};
   font-weight: 700;
 `;
 
 export const Description = styled.span`
-  font-size: 14px;
+  font-size: 0.875rem;
   color: ${({ theme }) => theme.colors.description};
 `;
 
@@ -37,13 +33,13 @@ export const ButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 33px;
+  margin-top: 2.0625rem;
 `;
 
 export const Price = styled.span`
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.price};
 `;
@@ -51,10 +47,10 @@ export const Price = styled.span`
 export const QuantityContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 0.5rem;
   border-radius: 6px;
   background-color: ${({ theme }) => theme.colors.baseButton};
-  margin-left: 23px;
+  margin-left: 1.4375rem;
 `;
 
 export const Button = styled.button`
@@ -69,9 +65,9 @@ export const Quantity = styled.span`
 `;
 
 export const CartButton = styled(Button)`
-  padding: 8px;
+  padding: 0.5rem;
   background: ${({ theme }) => theme.colors.purpleDark};
-  margin-left: 12px;
+  margin-left: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;

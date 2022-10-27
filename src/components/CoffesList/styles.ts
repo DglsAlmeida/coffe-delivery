@@ -12,5 +12,14 @@ export const Title = styled.h3``;
 export const CoffesListContent = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  padding: 30px 20px;
+  padding: 1.875rem 0;
+  gap: 20px;
+
+  @media only screen and (min-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (min-width: 780px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;

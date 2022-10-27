@@ -1,4 +1,4 @@
-export default [
+export default Object.freeze([
   {
     id: 1,
     img: {
@@ -32,4 +32,4 @@ export default [
     description: "Café expresso tradicional com espuma cremosa",
     price: 9.9,
   },
-];
+]);

@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-export const CheckoutContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 2.5rem;
-`;
-
-export const Title = styled.span`
-  color: ${({ theme }) => theme.colors.brown};
-  font-size: 1.125rem;
-  font-weight: 700;
-`;
-
 export const CheckoutForm = styled.form`
   display: flex;
   flex-direction: column;

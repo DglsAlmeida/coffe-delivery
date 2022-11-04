@@ -12,4 +12,12 @@ export default Object.freeze({
       },
     },
   },
+  CHECKOUT: {
+    title: "Complete seu pedido",
+    formTitle: "Endereço de entrega",
+    formSubtitle: "Informe o endereço onde deseja receber seu pedido",
+    paymentCardTitle: "Pagamento",
+    paymentCardSubtitle:
+      "O pagamento é feito na entrega. Escolha a forma que deseja pagar",
+  },
 });

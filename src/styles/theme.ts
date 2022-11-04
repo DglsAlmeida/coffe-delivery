@@ -3,6 +3,7 @@ export const defaultTheme = {
     white: "#FAFAFA",
     purpleLight: "#EBE5F9",
     purpleDark: "#4B2995",
+    purpleBrand: "#8047F8",
     yellowLight: "#F1E9C9",
     yellowDark: "#C47F17",
     grayLight: "#F3F2F2",

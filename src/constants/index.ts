@@ -19,5 +19,6 @@ export default Object.freeze({
     paymentCardTitle: "Pagamento",
     paymentCardSubtitle:
       "O pagamento é feito na entrega. Escolha a forma que deseja pagar",
+    paymentCoffesSelected: "Cafés selecionados",
   },
 });

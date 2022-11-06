@@ -1,9 +1,12 @@
 import { MapPin, ShoppingCart } from "phosphor-react";
 import Logo from "../../../public/images/logo.svg";
+import { useCart } from "../../contexts/CartContext/CartProvider";
 import { defaultTheme } from "../../styles/theme";
 import * as S from "./styles";
 
 export const Header = () => {
+  const { cart } = useCart();
+
   return (
     <S.HeaderContainer>
       <img src={Logo} alt="Coffe Delivery Logo" />
@@ -12,12 +15,13 @@ export const Header = () => {
           <MapPin size={22} weight="fill" />
           Porto Alegre, RS
         </S.Location>
-        <S.HeaderLink href="">
+        <S.HeaderLink to="/checkout">
           <ShoppingCart
             size={22}
             weight="fill"
             color={defaultTheme.colors.yellowDark}
           />
+          {cart.length > 0 && <S.ItemsCount>{cart.length}</S.ItemsCount>}
         </S.HeaderLink>
       </S.HeaderContent>
     </S.HeaderContainer>

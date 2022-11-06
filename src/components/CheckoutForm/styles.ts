@@ -4,6 +4,7 @@ export const CheckoutForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 12px;
 `;
 
 export const CheckoutUserAddressContent = styled.div`

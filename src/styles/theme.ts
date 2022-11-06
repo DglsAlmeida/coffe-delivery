@@ -11,5 +11,6 @@ export const defaultTheme = {
     baseButton: "#E6E5E5",
     description: "#8D8686",
     price: "#574F4D",
+    yelloBrand: "#DBAC2C",
   },
 };

@@ -4,7 +4,7 @@ export type Image = {
 };
 
 export interface CoffeCardProps {
-  id?: number;
+  id: number;
   img: Image;
   coffeType: string;
   title: string;

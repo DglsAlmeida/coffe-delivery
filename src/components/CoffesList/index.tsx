@@ -17,6 +17,7 @@ export const CoffesList = () => {
         {coffes.map((coffe) => (
           <CoffeCard
             key={coffe.id}
+            id={coffe.id}
             coffeType={coffe.coffeType}
             title={coffe.title}
             description={coffe.description}

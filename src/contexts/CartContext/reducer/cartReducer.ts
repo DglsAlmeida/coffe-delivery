@@ -41,8 +41,16 @@ export const cartReducer = (state = initialState, action: any) => {
 
       if (coffeIndex !== -1) {
         const newState = { ...state };
-        newState.cart[coffeIndex].quantity += action.payload.quantity;
-        return { ...newState };
+
+        if (
+          action.payload.quantity === -1 &&
+          newState.cart[coffeIndex].quantity === 0
+        ) {
+          return state;
+        } else {
+          newState.cart[coffeIndex].quantity += action.payload.quantity;
+          return { ...newState };
+        }
       }
 
       return state;

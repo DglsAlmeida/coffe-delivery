@@ -1,10 +1,18 @@
-import { useContext, useReducer } from "react";
+import { useContext, useEffect, useReducer } from "react";
 import { CartContext } from "./CartContext";
 import { ActionsType, CardProviderProps, CoffeItem } from "./interfaces";
 import { cartReducer, initialState } from "./reducer/cartReducer";
 
 export const CartProvider = ({ children }: CardProviderProps) => {
-  const [state, dispatch] = useReducer(cartReducer, initialState);
+  const [state, dispatch] = useReducer(cartReducer, initialState, () => {
+    const storedStateAsJSON = localStorage.getItem(
+      "@coffe-delivery:cart-state-1.0.0"
+    );
+
+    if (storedStateAsJSON) {
+      return JSON.parse(storedStateAsJSON);
+    }
+  });
 
   const addCoffe = (coffe: CoffeItem) => {
     dispatch({ type: ActionsType.ADD_COFFE, payload: coffe });
@@ -24,10 +32,18 @@ export const CartProvider = ({ children }: CardProviderProps) => {
     });
   };
 
+  useEffect(() => {
+    const stateJSON = JSON.stringify(state);
+
+    if (stateJSON) {
+      localStorage.setItem("@coffe-delivery:cart-state-1.0.0", stateJSON);
+    }
+  }, [state]);
+
   return (
     <CartContext.Provider
       value={{
-        cart: state.cart,
+        cart: state?.cart,
         addCoffe,
         removeCoffe,
         updateCoffeQuantity,

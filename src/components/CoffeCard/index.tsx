@@ -17,8 +17,6 @@ export const CoffeCard = ({
   const { cart, addCoffe, updateCoffeQuantity } = useCart();
   const quantityRef = useRef(0);
 
-  console.log("cart", cart);
-
   const increaseQuantity = () => {
     addCoffe({
       id,

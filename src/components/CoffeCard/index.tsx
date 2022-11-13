@@ -14,7 +14,7 @@ export const CoffeCard = ({
   coffeType,
   price,
 }: CoffeCardProps) => {
-  const { cart, addCoffe, updateCoffeQuantity } = useCart();
+  const { addCoffe, updateCoffeQuantity } = useCart();
   const quantityRef = useRef(0);
 
   const increaseQuantity = () => {
